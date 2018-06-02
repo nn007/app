@@ -18,7 +18,6 @@
   <body>
     
     <div class="container">
-      <!-- name -->
       <div class="form-group">
         <label class="introText">Name</label>
         <input type="text" class="form-control" id="name"  placeholder="nume" required>
@@ -34,7 +33,7 @@
         <input type="text" class="form-control" id="color" placeholder="english please" required>
       </div>
 
-      <input type="file" class="form-control" id="" onchange="showImage.call(this)" required>
+      <input type="file" class="form-control" onchange="showImage.call(this)" required>
       
       <button type="submit" class="btn btn-primary" id="button">Submit</button>
     </div>
@@ -44,41 +43,41 @@
 
         <div class="top-section">
 
-          <img src="" style="display: none;" width="80"  id="image">
+          <img src="" style="display: none;" width="80" alt="image" id="image">
           <div class="date">
-            <h3 id="NAME"></h3>
+            <h3 id="Name"></h3>
             <small id="hours"></small>
-            <small id="minutes"></samll>
+            <small id="minutes"></small>
           </div>
 
         </div>
 
-        
-        <h4 id="MESSAGE"></h4>
+        <h4 id="Message"></h4>
 
-          <div class="links">
-            <div id="outer" >
-                  <a class="FB_reactions" data-reactions-type='horizontal' data-unique-id="1" data-emoji-class="">
-                      <span style="">Like</span>
-                  </a>
-            </div>
-            <div class="comment"><a href="#"><i class="fas fa-comments"></i>Comment</a></div>
-            <div class="share"><a href="#"><i class="fas fa-share"></i>Share</a></div>
-          </div>
-          
-         
+              <div class="links">
+                <div id="outer" ><a class="FB_reactions" data-reactions-type='horizontal' data-unique-id="1" data-emoji-class="">
+                  <span style="">Like</span></a>
+                </div>
+                <div class="comment"><a id="comment" href="#"><i class="fas fa-comments"></i>Comment</a></div>
+                <div class="share"><a href="#"><i class="fas fa-share"></i>Share</a></div>
+              </div>
 
+              <div class="comment-section hidden">
+                <input type="text "id="text">
+                <a href="#" id="add">add</a>
+              </div>   
+                <ul id="content">
+                
+                </ul>
+                 
+              
       </div>
-
-    </div>
-    
-    
-    
-    
+      </div>
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
     <script src="facebook-reactions.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
