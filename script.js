@@ -1,9 +1,6 @@
 $(document).ready(function() {
 
-	$('.FB_reactions').facebookReactions({
-
-		//postUrl: "save.php"
-	});
+	$('.FB_reactions').facebookReactions({});
 });
 
 function showImage() {
@@ -19,7 +16,25 @@ function showImage() {
 		obj.readAsDataURL(this.files[0]);
 	}
 }
+//comment button
+$('#comment').on('click',(a)=>{
+	a.preventDefault();
+	$('.comment-section').toggleClass('hidden');	
+});
 
+//add comment
+$('#add').on('click',(e)=>{
+	e.preventDefault();
+	var text = $('#text').val();
+	var target = $('#content');
+	var li = $('<li></li>');
+	li.text(text);
+	target.append(li);
+	document.getElementById("text").value='';
+	$('.comment-section').addClass('hidden');	
+});
+
+//add content
 $('#button').on('click',function(){
 
 	//set up all the varibles
@@ -29,22 +44,18 @@ $('#button').on('click',function(){
 	var message = $('#message').val();
 
 	//add the variables to the html content
-	$("#NAME").text(name);
-	$("#MESSAGE").text(message).css({"color": color});
-	$("#hours").text(date.getHours());
+	$("#Name").text(name);
+	$("#Message").text(message).css({"color": color});
+	if(date.getHours()<10){
+		$("#hours").text('0'+date.getHours());
+	}else{
+		$("#hours").text(date.getHours());
+	}
+	
 	$("#minutes").text(':'+date.getMinutes());
 
 	//show the last container when the button is clicked
 	$(".container:last").removeClass("hidden");
 
-	
 
-});
-
-$('.like').on('mouseenter',function(){
-	$('img').removeClass('hidden');
-	$('.icons').css({"background":"white"});
-});
-$('.like').on('mouseleave',function(){
-	$('img').addClass('hidden');
 });
