@@ -18,41 +18,40 @@
   <body>
     
     <div class="container">
-      <div class="form-group">
-        <label class="introText">Name</label>
+      <form class="form-group">
+        <label class="introText">Nume</label>
         <input type="text" class="form-control" id="name"  placeholder="nume" required>
-      </div>
-
-      <div class="form-group">
+      
         <label class="jobTitle">Mesaj</label>
         <input type="text" class="form-control" id="message" placeholder="la ce te gandesti?" required>
-      </div>
-
-      <div class="form-group">
+      
         <label class="introTextColor">Culoare mesaj</label>
         <input type="text" class="form-control" id="color" placeholder="english please" required>
-      </div>
+      
 
-      <input type="file" class="form-control" onchange="showImage.call(this)" required>
+      <input type="file" class="form-control" id="file" onchange="showImage.call(this)" required>
       
       <button type="submit" class="btn btn-primary" id="button">Submit</button>
+      </form>
+      
     </div>
 
     <div class="container hidden">
       <div class="jumbotron">
+        <div class="jumbotron-color">
 
-        <div class="top-section">
+          <div class="top-section">
 
-          <img src="" style="display: none;" width="80" alt="image" id="image">
-          <div class="date">
-            <h3 id="Name"></h3>
-            <small id="hours"></small>
-            <small id="minutes"></small>
+            <img src="" style="display: none;" width="80" alt="image" id="image">
+            <div class="date">
+              <h3 id="my-name"></h3>
+              <small id="hours"></small>
+              <small id="minutes"></small>
+            </div>
+
           </div>
 
-        </div>
-
-        <h4 id="Message"></h4>
+          <h4 id="my-message"></h4>
 
               <div class="links">
                 <div id="outer" ><a class="FB_reactions" data-reactions-type='horizontal' data-unique-id="1" data-emoji-class="">
@@ -63,14 +62,15 @@
               </div>
 
               <div class="comment-section hidden">
-                <input type="text "id="text">
-                <a href="#" id="add">add</a>
-              </div>   
+                <input type="text" id="text">
+                <a href="#" id="add"><i class="far fa-paper-plane"></i></a>
+              </div> 
+
                 <ul id="content">
-                
+                  <img src="" id="commentIcon" width="20" height="20" alt="">
                 </ul>
-                 
-              
+        </div>
+          
       </div>
       </div>
    
