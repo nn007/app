@@ -6,6 +6,10 @@
     height: 80px;
     display: flex;
 }
+.jumbotron-color{
+	background: #484848;
+	padding: 10px;
+}
 .links{
 	width: 100%;
 	height: 50px;
@@ -28,9 +32,10 @@
 .date{
 	margin-left: 20px;
 }
-#Message{
+#my-message{
 	margin-top: 20px;
-} 
+}
+
 #outer{
 	width: 100%;
 }
@@ -49,8 +54,16 @@ ul{
 	padding: 0;
 	margin: 20px auto;
 	list-style-type: none;
+	position: relative;
 }
-
+form label, input{
+	margin: 10px auto;
+}
+#commentIcon{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
 /* Button */
 .FB_reactions {
 	position:relative;
