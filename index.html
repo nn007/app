@@ -19,36 +19,36 @@
     
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
+
+        <div class="form">
+          
           <div class="form-group">
-            <label class="introText">Name</label>
+            <label class="introText">Nume</label>
             <input type="text" class="form-control" id="name"  placeholder="nume" required>
           </div>
-        </div>
-
-        <div class="col-md-6">
+        
+        <div >
           <div class="form-group">
             <label class="jobTitle">Mesaj</label>
             <input type="text" class="form-control" id="message" placeholder="la ce te gandesti?" required>
           </div>
-        </div>
-        
-        <div class="col-md-12">
+             
           <div class="form-group">
             <label class="introTextColor">Culoare mesaj</label>
             <input type="text" class="form-control" id="color" placeholder="english please" required>
           </div>
-        </div>
-        
 
-        <input type="file" class="form-control" onchange="showImage.call(this)" required>
-        
-        <button type="submit" class="btn btn-primary text-center"  id="button">Submit</button>
+          <input type="file" class="form-control-file" id="file" onchange="showImage.call(this)" >  
+         
+        <div class=" text-center">
+          <button type="submit" class="btn btn-primary " id="button">Submit</button>
+        </div>
+        </div>
       </div>
     </div>
 
     <div class="container hidden">
-      <div class="jumbotron">
+      <div class="jumbotron" id="box">
 
         <div class="top-section">
 
@@ -68,19 +68,17 @@
                   <span style="">Like</span></a>
                 </div>
                 <div class="comment"><a id="comment" href="#"><i class="fas fa-comments"></i>Comment</a></div>
-                <div class="share"><a href="#"><i class="fas fa-share"></i>Share</a></div>
+                <div class="share"><a href="#" onclick="screenshot('box')"><i class="fas fa-share"></i>Share</a></div>
               </div>
 
               <div class="comment-section hidden">
-                <input type="text "id="text">
+                <input type="text "id="text" class="form-control" >
                 <a href="#" id="add"><i class="far fa-paper-plane"></i></a>
               </div>
 
               <ul id="content">
-                <img src="" id="commentIcon" width="20" height="20" alt="">
               </ul>
-                 
-              
+                       
       </div>
     </div>
    
